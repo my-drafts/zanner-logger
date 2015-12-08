@@ -1,0 +1,19 @@
+{
+  "name": "zanner-logger",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "util": "^0.10.3",
+    "zanner-typeof": "^1.0.1"
+  }
+}
