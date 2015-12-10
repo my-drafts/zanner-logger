@@ -1,6 +1,6 @@
 {
   "name": "zanner-logger",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "logger wrapper",
   "main": "index.js",
   "directories": {
@@ -14,7 +14,7 @@
   "dependencies": {
     "debug": "^2.2.0",
     "util": "^0.10.3",
-    "zanner-typeof": "^1.0.3"
+    "zanner-typeof": "^1.0.4"
   },
   "devDependencies": {},
   "repository": {
