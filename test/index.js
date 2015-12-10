@@ -1,3 +1,4 @@
+
 var logger = require('../');
 var log = logger('logger');
 

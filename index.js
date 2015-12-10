@@ -1,7 +1,7 @@
 
 var debug = require('debug');
 var pf = require('util').format;
-var of = require('zanner-typeof').typeOf;
+var of = require('zanner-typeof').of;
 
 var LEVELs = {
 	error: 0,
@@ -14,9 +14,9 @@ var LEVELs = {
 module.exports = function(_name){
 	var name = of(_name, 'string') && _name.length>0 ? _name : '???';
 	var levels = {};
-	var levelKeys = Object.keys(LEVELs);
-	levelKeys.forEach(function(key){
+	var levelKeys = Object.keys(LEVELs).map(function(key){
 		levels[key] = debug(pf('%s:%s', key, name));
+		return key;
 	});
 	levels['unknown'] = debug(pf('unknown:%s', name));
 	levels.log = function(level){
@@ -26,7 +26,7 @@ module.exports = function(_name){
 		}
 		else if(of(level, 'array')){
 			for(var index in level){
-				levels.log.apply(null, [level[index]].concat(args));
+				levels.log.apply(this, [level[index]].concat(args));
 			}
 		}
 	};
